@@ -10,7 +10,7 @@ window.Monetra = window.Monetra || {};
 // still lives only in this browser's local storage, completely separate
 // from this — signing in does not sync or gate any of that.
 (function () {
-  const API_BASE_URL = 'http://localhost:3000';
+  const API_BASE_URL = 'https://monetra-rju5.onrender.com';
   const TOKEN_KEY = 'monetra_auth_token';
   const USER_KEY = 'monetra_auth_user';
 
