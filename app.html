@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monetra — Personal Finance Tracker</title>
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="stylesheet" href="css/styles.css">
+<script src="js/vendor/chart.umd.min.js"></script>
+</head>
+<body>
+<div class="app-shell">
+  <aside class="sidebar">
+    <a class="brand" href="index.html" style="text-decoration:none; color:inherit;" title="Back to home"><img class="brand-mark" src="images/logo-symbol.png" alt="Monetra"><span class="brand-name">Monetra</span></a>
+    <nav class="nav" id="mainNav">
+      <button class="nav-item active" data-tab="dashboard">Dashboard</button>
+      <button class="nav-item" data-tab="accounts">Accounts</button>
+      <button class="nav-item" data-tab="cards">Cards</button>
+      <button class="nav-item" data-tab="wallets">Wallets</button>
+      <button class="nav-item" data-tab="transactions">Transactions</button>
+      <button class="nav-item" data-tab="planner">Monthly Planner</button>
+      <button class="nav-item" data-tab="debts">Debts</button>
+      <button class="nav-item" data-tab="paylater">PayLater</button>
+      <button class="nav-item" data-tab="investments">Investments</button>
+      <button class="nav-item" data-tab="settings">Settings</button>
+      <button class="nav-item" data-tab="profile">Profile</button>
+    </nav>
+    <div class="sidebar-footer">
+      <button type="button" class="sidebar-logout-btn" id="sidebarLogoutBtn" style="display:none;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg>
+        <span>Log out</span>
+      </button>
+      <div class="sidebar-spark">
+        <span class="sidebar-spark-text">A <strong>SPARK</strong> product</span>
+        <img src="images/spark-logo.png" alt="SPARK" class="sidebar-spark-logo">
+      </div>
+      <div class="muted small" id="ratesStatus">Rates: —</div>
+    </div>
+  </aside>
+  <main class="main">
+    <header class="topbar">
+      <h1 id="pageTitle">Dashboard</h1>
+      <div class="topbar-actions">
+        <label class="field-inline">
+          <span>Show total in</span>
+          <select id="displayCurrencySelect"></select>
+        </label>
+        <button class="btn btn-ghost" id="refreshAllBtn">Refresh rates &amp; prices</button>
+      </div>
+    </header>
+
+    <section id="tab-dashboard" class="tab-panel active"></section>
+    <section id="tab-accounts" class="tab-panel"></section>
+    <section id="tab-cards" class="tab-panel"></section>
+    <section id="tab-wallets" class="tab-panel"></section>
+    <section id="tab-transactions" class="tab-panel"></section>
+    <section id="tab-planner" class="tab-panel"></section>
+    <section id="tab-debts" class="tab-panel"></section>
+    <section id="tab-paylater" class="tab-panel"></section>
+    <section id="tab-investments" class="tab-panel"></section>
+    <section id="tab-settings" class="tab-panel"></section>
+    <section id="tab-profile" class="tab-panel"></section>
+  </main>
+</div>
+
+<div class="modal-backdrop" id="modalBackdrop">
+  <div class="modal" id="modalRoot"></div>
+</div>
+
+<script src="js/palette.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/currency.js"></script>
+<script src="js/stocks.js"></script>
+<script src="js/calc.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/dashboard.js"></script>
+<script src="js/accounts.js"></script>
+<script src="js/cards.js"></script>
+<script src="js/wallets.js"></script>
+<script src="js/transactions.js"></script>
+<script src="js/planner.js"></script>
+<script src="js/debts.js"></script>
+<script src="js/paylater.js"></script>
+<script src="js/investments.js"></script>
+<script src="js/settings.js"></script>
+<script src="js/profile.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
